@@ -1,11 +1,23 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from "react";
 import { books } from '../data'
 import Book from '../components/ui/Book'
 
-const Books = ({books: initialBooks}) => {
-const [books, setBooks] = useState(initialBooks);
-function filterBooks(){
-    console.log('filter')
+const Books = ({books: initalBooks}) => {
+const [books, setBooks] = useState();
+useEffect(() => {
+    setBooks(initalBooks);
+  }, [initalBooks]);
+
+function filterBooks(filter){
+    if (filter === 'LOW_TO_HIGH') {
+        setBooks(books.slice().sort((a, b) => (a.salePrice || a.originalPrice) - (b.salePrice || b.originalPrice)))
+    }
+    if (filter === 'HIGH_TO_LOW') {
+        setBooks(books.slice().sort((a, b) => (b.salePrice || b.originalPrice) - (a.salePrice || a.originalPrice) ))
+    }
+    if (filter === 'RATING') {
+        setBooks(books.slice().sort((a, b) => (b.rating - a.rating  )))
+    }
 }
   return (
     <div id="books__body">

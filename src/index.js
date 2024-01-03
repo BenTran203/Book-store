@@ -11,6 +11,7 @@ import Nav from "./components/Nav";
 import Home from "./pages/Home";
 import Books from "./pages/Books"
 import { books } from './data'
+import BookInfo from  './pages/BookInfo'
 
 //Import libary
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -23,6 +24,7 @@ import {
   faTimes,
   faStar,
   faStarHalfAlt,
+  faArrowLeft,
 } from "@fortawesome/free-solid-svg-icons";
 library.add(
   faBars,
@@ -32,7 +34,8 @@ library.add(
   faBookOpen,
   faTags,
   faStar,
-  faStarHalfAlt
+  faStarHalfAlt,
+  faArrowLeft
 );
 
 //React DOM
@@ -43,7 +46,13 @@ root.render(
       <Nav></Nav>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/books" render={() => <Books books={books} />} />
+        <Route path="/books" exact render={() => <Books books={books} />} />
+        <Route
+          path="/books/:id"
+          render={() => (
+            <BookInfo books={books}/>
+          )}
+        />
       </Routes>     
       <Footer></Footer>
     </Router>
