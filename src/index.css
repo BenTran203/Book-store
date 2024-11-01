@@ -341,7 +341,6 @@ FEATURES
 .book__img {
   max-height: 380px;
   transition: all 300ms ease;
-  cursor: not-allowed;
   object-fit: contain;
   object-position: left;
 }
@@ -484,6 +483,276 @@ select {
 .fa-spinner {
   animation: rotate 600ms infinite linear;
 }
+
+
+/* 
+
+  book/:id
+    
+*/
+
+.container__book--selected {
+  padding-top: 16px;
+}
+
+.book__selected {
+  display: flex;
+}
+
+.book__selected--figure {
+  width: 40%;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.book__selected--img {
+  max-height: 500px;
+  width: auto;
+  max-width: 100%;
+}
+
+.book__selected--description {
+  width: 60%;
+  padding: 16px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.book__selected--top {
+  padding: 0 24px;
+  margin-bottom: 8px;
+  font-size: 32px;
+  color: #242424;
+  display: flex;
+  align-items: center;
+}
+
+.book__selected--top a {
+  display: flex;
+  align-items: center;
+  text-decoration: none; 
+  color: inherit; 
+}
+
+.book__selected--link {
+  color: #242424;
+}
+
+.fa-arrow-left {
+  font-size: 30px;
+}
+
+.book__selected--title--top {
+  margin-left: 10px;
+  margin-bottom: 0;
+}
+
+.book__summary {
+  margin-bottom: 16px;
+}
+
+.book__selected--title {
+  margin-bottom: 8px
+}
+
+.book__summary--title {
+  margin-bottom: 8px;
+}
+
+.book__summary--para {
+  margin-bottom: 16px;
+}
+
+.book__price {
+  font-size: 16px;
+  margin: 8px 0 24px 0;
+}
+
+.link__breadcrumbs {
+  color: #bfbfbf;
+  margin-bottom: 16px;
+}
+
+/* 
+
+  CART 
+    
+*/
+
+.cart__header {
+  background-color: #7342d6;
+  margin: 20 24px;
+  padding: 8px 16px;
+  color: white;
+  display: flex;
+}
+
+.cart__items {
+  margin: 24px;
+  display: flex;
+  padding-right: 8px;
+}
+
+.cart__title {
+  margin-bottom: 16px;
+}
+
+.cart__book {
+  width: 60%;
+  display: flex;
+}
+
+.cart__quantity {
+  width: 40%;
+  display: flex;
+  align-items: center;
+}
+
+.cart__total {
+  width: 100%;
+  max-width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 18px;
+}
+
+.cart__input {
+  padding: 8px;
+  width: 60px;
+}
+
+.cart__book--img {
+  width: 100%;
+  max-width: 90px;
+  max-height: 128px;
+  border: #242424;
+  border-width: thin;
+}
+
+
+.cart__book--info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8px 16px;
+}
+
+.cart__book--title {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.cart__book--price {
+  margin-bottom: 16px;
+}
+
+.cart__book--remove {
+  background-color: transparent;
+  color: #cf0000;
+  border: none;
+  padding-left: 0;
+  width: 48px;
+}
+
+.empty__cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 50vh;
+}
+
+.empty__cart .btn {
+  margin: 25px;
+}
+
+.total {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0px;
+  width: 100%;
+  max-width: 300px;
+  margin-left: auto;
+  font-size: 16px;
+}
+
+.total__item {
+  font-size: 18px;
+  margin-bottom: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.total__sub-total {
+  border-top: 2px solid #7342d6;
+  padding-top: 0px;
+}
+
+.total__price {
+  font-weight: bold;
+}
+
+.cart__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart__empty--img {
+  padding: 40px;
+  max-width: 400px;
+}
+
+.btn__checkout {
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 0;
+}
+
+.cart__quantity input {
+  width: 2.5rem;
+  text-align: center;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.cart__quantity input:hover {
+  border-color: #7342d6;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.cart__quantity input:focus {
+  border-color: #7342d6;
+  box-shadow: 0 2px 5px rgba(115, 66, 214, 0.3);
+}
+
+
+.cart__price {
+  font-size: 1.1rem;
+  text-align: right;
+  min-width: 5rem; 
+  display: flex;
+  align-items: center;
+}
+
+.cart__price::before {
+  font-weight: normal;
+  color: #333;
+  margin-right: 2px;
+}
+
 
 @keyframes rotate {
   0% {
