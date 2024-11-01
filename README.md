@@ -8,8 +8,7 @@ This is a full-stack e-commerce application for a bookstore. It features a secur
 - [Environment Variables](#environment-variables)
 - [Usage](#usage)
 - [Stripe Integration](#stripe-integration)
-- [Folder Structure](#folder-structure)
-- [Scripts](#scripts)
+
 
 ---
 
@@ -34,7 +33,7 @@ This is a full-stack e-commerce application for a bookstore. It features a secur
     ```
     npm install
     ```
-5. Environment Variables
+## Environment Variables
   To secure sensitive information, environment variables are stored in a .env file excluded from version control.'
   ```
   touch src/backend/.env
@@ -54,6 +53,7 @@ Add .env to .gitignore to keep it secure:
 # Ignore .env file
 .env
 ```
+## Usage
 9. Start Backend Server:
 Go to the backend directory and start the server:
 ```
