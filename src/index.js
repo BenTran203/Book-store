@@ -1,17 +1,10 @@
 //Import package
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
 // Import components
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-import Footer from "./components/Footer";
-import Nav from "./components/Nav";
-import Home from "./pages/Home";
-import Books from "./pages/Books"
-import { books } from './data'
-import BookInfo from  './pages/BookInfo'
+import App from "./App";
 
 //Import libary
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -37,25 +30,13 @@ library.add(
   faStarHalfAlt,
   faArrowLeft
 );
+//Function 
 
 //React DOM
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Router>
-      <Nav></Nav>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/books" exact render={() => <Books books={books} />} />
-        <Route
-          path="/books/:id"
-          render={() => (
-            <BookInfo books={books}/>
-          )}
-        />
-      </Routes>     
-      <Footer></Footer>
-    </Router>
+    <App/>
   </React.StrictMode>
 );
 
