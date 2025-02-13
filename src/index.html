@@ -3,59 +3,85 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./index.css" />
-    <script
-      src="https://kit.fontawesome.com/faf2dccdeb.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Libary</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>Library</title>
   </head>
 
   <body>
     <section id="landing">
-      <nav>
-        <div class="nav__container">
-          <img class="logo" src="./assests/Library.svg" alt="" />
-          <ul class="nav__links">
-            <li><a href="" class="nav__link">Home</a></li>
-            <li><a href="" class="nav__link">Contact</a></li>
-            <li><a href="" class="nav__link">Books</a></li>
-          </ul>
-          <button class="btn__menu" onclick="openMenu()">
-            <i class="fa-solid fa-bars"></i>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <!-- Brand logo -->
+          <a class="navbar-brand" href="#">
+            <img src="./assets/Library.svg" alt="Library Logo" width="100" height="60">
+          </a>
+
+          <!-- Toggle button for mobile view -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="menu__backdrop">
-          <button class="btn__menu btn__menu--close" onclick="closeMenu()">
-            <i class="fa-regular fa-circle-xmark"></i>
-          </button>
-          <ul class="menu__links">
-            <li class="menu__list"><a href="#" class="menu__link" onclick="closeMenu()">Home</a></li>
-            <li class="menu__list"><a href="#features" class="menu__link" onclick="closeMenu()">Books</a></li>
-            <li class="menu__list"><a class="menu__link no-cursor" onclick="closeMenu()">Contact</a></li>
+
+          <!-- Navbar links -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Books</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Offcanvas Menu -->
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menu</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="list-group">
+            <li class="list-group-item"><a href="#" class="menu__link">Home</a></li>
+            <li class="list-group-item"><a href="#features" class="menu__link">Books</a></li>
+            <li class="list-group-item"><a href="#" class="menu__link">Contact</a></li>
           </ul>
         </div>
       </div>
-      </nav>
 
+      <!-- Header section -->
       <header>
         <div class="header__container">
           <div class="header__description">
-            <h1>Australia's most awarded online libary platform</h1>
+            <h1>Australia's most awarded online library platform</h1>
             <h2>
-              Find your dream book with <span class="purple__text">Libary</span>
+              Find your dream book with <span class="purple__text">Library</span>
             </h2>
             <a href="#features">
-              <button class="btn">Browse Book</button>
+              <button class="btn btn-primary">Browse Book</button>
             </a>
           </div>
           <figure class="header__img--wrapper">
-            <img src="./assests/Undraw_Books.svg" alt="Background" />
+            <img src="./assets/Undraw_Books.svg" alt="Background" />
           </figure>
         </div>
       </header>
     </section>
 
-    <main>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
+
+
+<!-- <main>
       <section id="highlights">
         <div class="container">
           <div class="row">
@@ -328,9 +354,9 @@
           </div>
         </div>
       </section>
-    </main>
+    </main> -->
 
-    <footer>
+<!-- <footer>
       <div class="container">
         <div class="row row__column">
           <a href="#">
@@ -351,6 +377,7 @@
           <div class="footer__copyright">Copyright &copy; 2021 Libary</div>
         </div>
       </div>
-    </footer>
-  </body>
+    </footer> -->
+</body>
+
 </html>
